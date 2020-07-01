@@ -2,14 +2,23 @@
  * Authored by: Tony Branch <tonybranch.org@yahoo.com>
  */
 
-//  using Gsl;
-int swap_elements (int x, int y) {
-    return x + y;
-}
+static void main (string[] args) {
+    int[] array = {};
+    array.resize (4);
 
-void main (string[] args) {
-    int a = 5;
-    int b = 7;
-    //  swap_elements (a, b);
-    print (@"a = $a, b = $b, swap = $(swap_elements (a, b))\n");
+    foreach (var item in array) {
+        print (@"$item ");
+    }
+
+    for (int i = 0; i < array.length; i++) {
+        array[i] += i;
+    }
+
+    print ("\n");
+
+    array.resize (8);
+    foreach (var item in array) {
+        print (@"$item ");
+    }
+    //  bubble_sort (a, b);
 }
