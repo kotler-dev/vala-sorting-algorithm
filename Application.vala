@@ -1,30 +1,42 @@
-/*
- * Authored by: Tony Branch <tonybranch.org@yahoo.com>
- */
-//vundle
 using GLib.Random;
 
 static void main (string[] args) {
-    // Initiate random seed
-    Random.set_seed ((uint32) get_monotonic_time());
+    //Random.set_seed ((uint32) get_monotonic_time());
 
-    int[] array = {};
-    int cmd = 10;
-    array.resize (cmd);
-
-    foreach (var item in array) {
-        print (@"$item ");
+    int[] mas = {4, 2, 1, 3};
+    foreach (var item in mas) {
+        print (@"$item");
     }
 
-    for (int i = 0; i < array.length; i++) {
-        array[i] += int_range ();
+    int swap;
+    for (int i = 0; i < mas.length; i++) {
+        for (int j = 0; j < (mas.length - i - 1); j++) {
+            if (mas[j] > mas[j + 1]) {
+                swap = mas[j];
+                mas[j] = mas[j + 1];
+                mas[j + 1] = swap;
+            }
+        }
     }
 
-    print ("\n");
+    print (@"\n");
 
-    //  array.resize (8);
-    foreach (var item in array) {
-        print (@"$item ");
+    foreach (var item in mas) {
+        print (@"$item");
     }
-    //  bubble_sort (a, b);
+
+    print (@"\n");
+    //  int[] array = {};
+    //  int cmd = 10;
+    //  array.resize (cmd);
+
+    //  for (int i = 0; i < array.length; i++) {
+    //      while (true) {
+            
+    //      }
+    //  }
+
+    //  foreach (var item in array) {
+    //      print (@"$item ");
+    //  }
 }
